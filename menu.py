@@ -1,3 +1,9 @@
+"""Menú visual de Pizza JAT
+    Contiene una visual en ascii con el logo de la empresa y un menú visual con las opciones posibles para que el cliente interactue con el programa y haga su pedido
+    Variables: No contiene
+    
+    Returns: input[seleccion]: Registra las elecciones del cliente para ser procesadas en los otros programas.
+    """
 def mostrar_menu():
     print(r"   _____ _                     _      _______   ")
     print(r"  |  __ (_)                   | |  /\|__   __|  ")
