@@ -1,30 +1,30 @@
-import menu as m
-import estimartiempo as est
-from personalizarpizza import masa, salsa, seleccionar_ingredientes, mostrar ingredientes
-from estimartiempo import estimar_confirmar
+from menu import mostrar_menu
+from estimaryconfirmar import estimar_confirmar
+from personalizarpizza import elegir_masa, elegir_salsa, seleccionar_ingredientes, mostrar_ingredientes_act
 
-masa= ""
+masa=""
 salsa=""
 ingredientes_act = []
 
 while True:
-    opcion = m.mostrar_menu()
+    opcion = mostrar_menu()
 
     if opcion == 1:
-        pass
+        m = elegir_masa()
+        print(f"Elegiste la masa {m}")
     elif opcion == 2:
-        pass
+        s = elegir_salsa()
+        print(f"Elegiste la salsa {s}")
     elif opcion == 3:
-        pass
+        ingredientes_act = seleccionar_ingredientes(ingredientes_act)
     elif opcion == 4:
-        pass
+        mostrar_ingredientes_act(ingredientes_act)
     elif opcion == 5:
-        pass
+        estimar_confirmar(ingredientes_act)
     elif opcion == 6:
-        pass
+        print("Gracias por preferir Pizza JAT!")
     else:
-        #mensaje de error
-        pass
+        print("Opción inválida. Ingresa una opción Válida [1, 2, 3, 4, 5, 6]")
 
 if __name__ == "__main__":
     main()

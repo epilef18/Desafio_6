@@ -1,4 +1,4 @@
-def salsa():
+def elegir_salsa():
     """Muestra y permite elegir el tipo de salsa.
     Variables:
         salsas(arr): contiene las opciones de masas disponibles
@@ -18,7 +18,7 @@ def salsa():
     return salsas[seleccion -1]
 
 
-def masa():
+def elegir_masa():
     """Muestra y permite elegir el tipo de masa.
     Variables:
         masas(arr): contiene las opciones de masas disponibles
@@ -38,6 +38,13 @@ def masa():
 
 
 def seleccionar_ingredientes(ingredientes_act):
+    """Permite elegir ingredientes para la pizza:
+    Variables:
+        -accion(str): opcion (a/e) para que el usuario pueda agregar/eliminar 
+        -ingredientes(arr): ingredientes disponibles para la pizza
+    
+    Returns: ingredientes_act(arr): ingredientes requeridos por el usuario.
+    """
     ingredientes = ["Tomate", "Champiñones", "Aceituna","Cebolla", "Pollo", "Jamon", "Carne", "Tocino", "Queso"]
     
     for i, ing in enumerate(ingredientes, 1):
@@ -57,6 +64,10 @@ def seleccionar_ingredientes(ingredientes_act):
         return ingredientes_act
     
 def mostrar_ingredientes_act(ingredientes_act):
+    """Muestra los ingredientes de la pizza:
+    Variables:
+        -ingredientes_act(arr): ingredientes requeridos por el usuario
+    """
     print("\n Ingredientes actuales en la Pizza:")
     for i in ingredientes_act:
         print(f'- {i}')
